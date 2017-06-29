@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Flights</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="presentFiltersModal()">
+        <ion-icon name="options"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home">
+  <ion-list>
+    <div class="failure" *ngIf="error.status">
+      <h3>Flights unavailable</h3>
+      <h5>{{ error.details }}</h5>
+      <ion-icon class="custom" name="ios-close-circle-outline"></ion-icon>
+    </div>
+    <ion-item *ngIf="flights?.length == 0">
+      <p text-wrap>
+        No flights visible at an altitude of {{ this.filters.altitude.upper }} feet in a {{ this.filters.radius }} kilometer radius. <br><br> Try different parameters in Settings.
+      </p>
+    </ion-item>
+    <div *ngFor="let flight of flights" (click)='itemTapped($event, flight)'>
+      <!--    <ion-item *ngIf="person.Reg || person.Op" >-->
+      <ion-item text-wrap>
+        <b><b *ngIf="!flight.Reg">Unlisted</b> {{flight.Reg}} | Altitude: {{flight.Alt}} ft. | Distance: {{ flight.Dst }} km.</b>
+        <h2>{{ flight.Op }}</h2>
+        <p>{{ flight.Man }} {{ flight.Type }}</p>
+        <p *ngIf="flight.From">From: {{ flight.From }}</p>
+        <p *ngIf="flight.To">To: {{ flight.To }}</p>
+      </ion-item>
+    </div>
+  </ion-list>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content refreshingSpinner="circles"></ion-refresher-content>
+  </ion-refresher>
+
+</ion-content>

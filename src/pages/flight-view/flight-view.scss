@@ -1,0 +1,37 @@
+page-flight-view {
+  .extended {
+    height: 90px;
+    color: white;
+    margin-top: -2px;
+  }
+
+  .extended h1{
+    font-size: 40px;
+  }
+
+  .header{
+    margin-bottom: 20px;
+  }
+
+  .extended h5, h4, h3, h2, h1{
+
+  }
+
+  .header h1,h2,h3,h4,h5{
+    margin-left: 10px;
+    line-height: 30px;
+  }
+
+
+  .stats p{
+    line-height: 15px;
+    font-size: 100%;
+  }
+
+  .herotext {
+  }
+
+  .herotext h3, h5{
+    line-height: 10px;
+  }
+}

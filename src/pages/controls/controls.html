@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">Close</button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <form [formGroup]="filtersInput" (ngSubmit)="logForm()">
+      <ion-item>
+        <ion-label>Select altitude range:</ion-label>
+        <ion-badge item-end color="dark" style="float: right;">
+          {{ filtersInput.value.altitude.lower }} ft. - {{ filtersInput.value.altitude.upper }} ft.
+        </ion-badge>
+      </ion-item>
+      <ion-item>
+       <ion-range dualKnobs="true" formControlName="altitude" min="0" max="40000">
+         <ion-label range-left>0 feet</ion-label>
+         <ion-label range-right>40,000 feet</ion-label>
+      </ion-range>
+     </ion-item>
+     <ion-item>
+       <ion-label>Select radius: </ion-label>
+       <ion-badge item-end color="dark" style="float: left;">{{ filtersInput.value.radius }} km.</ion-badge>
+     </ion-item>
+      <ion-item>
+          <ion-range min="0" max="1000" step="50" snaps="true" formControlName="radius" color="secondary">
+            <ion-label range-left>0 km.</ion-label>
+            <ion-label range-right>1000 km.</ion-label>
+          </ion-range>
+
+        <!-- <ion-input formControlName="radius">{{ filtersInput.value.radius }}</ion-input>km. -->
+      </ion-item>
+    </form>
+
+  <!-- <div [hidden]="!myParam">
+    <h5>Parameters passed:</h5>
+
+    <pre style="background-color: #f8f8f8">selections: [
+  {{myParam}}
+]</pre>
+
+  </div>
+  <div [hidden]="myParam">
+    <p>No parameters passed.</p>
+  </div> -->
+
+  <!-- <button ion-button type="submit" [disabled]="!filtersInput.valid">Submit</button> -->
+  <br>
+  <button ion-button block round color="" full (click)="dismiss()">Submit</button>
+
+</ion-content>

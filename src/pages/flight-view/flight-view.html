@@ -1,0 +1,119 @@
+<!--
+  Generated template for the FlightViewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Details</ion-title>
+    <ion-buttons end>
+      <!-- <button ion-button icon-only>
+        <ion-icon name="refresh"></ion-icon>
+      </button>
+      <button ion-button icon-only>
+        <ion-icon name="share"></ion-icon>
+      </button> -->
+    </ion-buttons>
+  </ion-navbar>
+  <ion-navbar color="primary" class="extended">
+    <div class="header">
+    <div *ngIf="!flight.Reg">
+      <h1>Unlisted</h1><h3> (Private)</h3>
+    </div>
+    <h1>{{ flight.Reg }}</h1><h3> {{ flight.Man }} {{ flight.Type }}</h3>
+  </div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list text-wrap>
+    <ion-item *ngIf="flight.Op">
+      <div>
+        <ion-note item-left>
+          Operator
+          <ion-icon name="information-circle" (click)="showHelp('op')"></ion-icon>
+        </ion-note>
+        <div style="float: right;">
+          {{ flight.Op }}
+        </div>
+      </div>
+    </ion-item>
+    <ion-item *ngIf="flight.From">
+      <div>
+        <ion-note item-left>
+          From
+        </ion-note>
+        <div style="float: right;">
+          {{ flight.From }}
+        </div>
+      </div>
+    </ion-item>
+    <ion-item *ngIf="flight.To">
+      <div>
+        <ion-note item-left>
+          To
+        </ion-note>
+        <div style="float: right;">
+          {{ flight.To }}
+        </div>
+      </div>
+    </ion-item>
+    <ion-item>
+      <br>
+      <ion-row style="text-align: center;" class="stats">
+        <ion-col>
+          <p>Altitude<p>
+          <h1>{{ (flight.Alt) | number:0 }}</h1>
+          <p>feet</p>
+        </ion-col>
+        <ion-col>
+          <p>Speed</p>
+          <div [hidden]="!flight.Spd">
+            <h1>{{ (flight.Spd * 1.15078) | number:0 }}</h1>
+          </div>
+          <div [hidden]="flight.Spd">
+            <h1>Unavail.</h1>
+          </div>
+          <p>mph</p>
+        </ion-col>
+      </ion-row>
+      <br>
+    </ion-item>
+    <ion-item *ngIf="flight.Mdl">
+      <div>
+        <ion-note item-left>
+          Model
+          <ion-icon name="information-circle" (click)="showHelp('model')"></ion-icon>
+        </ion-note>
+        <div style="float: right;">
+          {{ flight.Mdl }}
+        </div>
+      </div>
+    </ion-item>
+    <ion-item *ngIf="flight.Icao">
+      <div>
+        <ion-note item-left>
+          ICAO
+          <ion-icon name="information-circle" (click)="showHelp('icao')"></ion-icon>
+        </ion-note>
+        <div style="float: right;">
+          {{ flight.Icao }}
+        </div>
+      </div>
+    </ion-item>
+    <ion-item *ngIf="flight.PosTime">
+      <div>
+        <ion-note item-left>
+          Time
+          <ion-icon name="information-circle" (click)="showHelp('time')"></ion-icon>
+        </ion-note>
+        <div style="float: right;">
+          {{ flight.PosTime | date:'medium' }}
+        </div>
+      </div>
+    </ion-item>
+    <img style="width: 100%;" src="https://maps.googleapis.com/maps/api/staticmap?autoscale=2&size=300x300&maptype=terrain&format=png&visual_refresh=true&markers=icon:http://i.imgur.com/HQPS0Wh.png%7Cshadow:false%7C{{ flight.Lat }},+{{ flight.Long }}&markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C{{ filters.coordinates.latitude }},+{{ filters.coordinates.longitude }}">
+
+  </ion-list>
+</ion-content>
