@@ -8,11 +8,11 @@ This repository contains the source code for Connair, an Ionic 2 mobile applicat
 
 <br><br>
 <p align="center">
-<img src="http://i.imgur.com/hjcpthl.png" width="225px"/>
+<img src="http://i.imgur.com/hjcpthl.png" width="240px"/>
 &nbsp;&nbsp;&nbsp;
-<img src="http://i.imgur.com/r0mrxkT.png" width="225px"/>  
+<img src="http://i.imgur.com/r0mrxkT.png" width="240px"/>  
 &nbsp;&nbsp;&nbsp;
-<img src="http://i.imgur.com/tQzxgaD.png" width="225px"/></p>
+<img src="http://i.imgur.com/tQzxgaD.png" width="240px"/></p>
 <br>
 
 ## Overview
