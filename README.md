@@ -1,4 +1,6 @@
+
 <h1 align="center">
+<img width="200px" src="https://raw.githubusercontent.com/timtheguy/Connair/master/resources/icon_alt.png"><br>
 Connair
 </h1>
 This repository contains the source code for Connair, an Ionic 2 mobile application for exploring the sky around you.
@@ -37,3 +39,5 @@ _TODO: Add instructions for building the app locally._
 
 ## Attribution
 Live flight data from ADSBexchange, http://www.ADSBexchange.com
+
+Logo adapted from the [Noun Project, Cell Phone Collection](https://thenounproject.com/yalanis/collection/cell-phone/)
