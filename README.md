@@ -5,7 +5,7 @@ Connair
 </h1>
 This repository contains the source code for Connair, an Ionic 2 mobile application for exploring the sky around you.
 
-<br>
+<br><br>
 <p align="center">
 <img src="http://i.imgur.com/hjcpthl.png" width="225px"/>
 &nbsp;&nbsp;&nbsp;
