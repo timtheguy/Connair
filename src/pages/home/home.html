@@ -24,7 +24,7 @@
     <div *ngFor="let flight of flights" (click)='itemTapped($event, flight)'>
       <!--    <ion-item *ngIf="person.Reg || person.Op" >-->
       <ion-item text-wrap>
-        <b><b *ngIf="!flight.Reg">Unlisted</b> {{flight.Reg}} | Altitude: {{flight.Alt}} ft. | Distance: {{ flight.Dst }} km.</b>
+        <b><b *ngIf="!flight.Reg">Unlisted</b> {{flight.Reg}} | Alt: {{flight.Alt}} ft. | Dst: {{ (flight.Dst * 0.621371) | number:0 }} mi.</b>
         <h2>{{ flight.Op }}</h2>
         <p>{{ flight.Man }} {{ flight.Type }}</p>
         <p *ngIf="flight.From">From: {{ flight.From }}</p>
