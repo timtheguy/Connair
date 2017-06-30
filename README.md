@@ -5,6 +5,15 @@ Connair
 </h1>
 This repository contains the source code for Connair, an Ionic 2 mobile application for exploring the sky around you.
 
+<br>
+<p align="center">
+<img src="http://i.imgur.com/hjcpthl.png" width="225px"/>
+&nbsp;&nbsp;&nbsp;
+<img src="http://i.imgur.com/r0mrxkT.png" width="225px"/>  
+&nbsp;&nbsp;&nbsp;
+<img src="http://i.imgur.com/tQzxgaD.png" width="225px"/></p>
+<br>
+
 ## Overview
 ### What is it?
 Connair is an Ionic 2 mobile application that allows you to explore the sky, viewing aircraft flying around your location based on filters such as aircraft altitude and distance from your location. Using these filters, one can narrow down a "window" to view aircraft and then learn more about what it is in the air.
