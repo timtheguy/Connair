@@ -39,3 +39,5 @@ _TODO: Add instructions for building the app locally._
 
 ## Attribution
 Live flight data from ADSBexchange, http://www.ADSBexchange.com
+
+Logo adapted from the [Noun Project, Cell Phone Collection](https://thenounproject.com/yalanis/collection/cell-phone/)
